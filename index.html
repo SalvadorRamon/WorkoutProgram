@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--importing bootstrap-->
+	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">-->
+
+	<!--
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	
+	-->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+		integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+	<!--importing font from google -->
+	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Amiko" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Amiko|Lobster+Two|Yatra+One" rel="stylesheet">
+	<link rel="stylesheet2" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
+
+
+	<link rel="icon" href="CompanyLogo.png">
+
+	<style>
+		p {
+			font-size: 15px;
+			text-align: center;
+			color: green;
+			font-family: Amiko;
+			font-weight: bold;
+		}
+
+		h1 {
+			font-size: 50px;
+			font-family: Lobster Two;
+		}
+
+		.larger-image {
+			width: 30%;
+		}
+
+		.center-block {
+
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+
+		}
+
+		.smaller-image {
+			width: 20%;
+			height: 20%;
+		}
+
+		.thick-red-border {
+			border-color: red;
+			border-width: .5px;
+			border-style: solid;
+			border-radius: 50%;
+		}
+
+		.silver-background {
+			background-color: silver;
+		}
+
+		#PR {
+			padding: 5px;
+		}
+
+		}
+
+		#maxWeightInput {
+			padding: 5px;
+			size: 10px;
+			font-weight: bold;
+			align-content: center;
+		}
+
+		#EPR {
+			font-family: Lobster Two;
+			font-size: 18px;
+		}
+
+		#topRow {
+			background-color: green;
+			font-family: 'Ubuntu', sans-serif, Amiko;
+			font-weight: bold;
+			font-size: 20px;
+			color: black;
+		}
+
+		body {
+			background-color: black;
+		}
+	</style>
+
+	<title>Workout Program </title>
+
+	<!-- Place your script includes in this location -->
+	<!-- NOTICE: You should either source it, or have code in it. -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+		integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+	<!-- Import Bootstrap's Javascript code AFTER including jQuery so that Bootstrap takes advantage of it. -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+		crossorigin="anonymous"></script>
+
+	<!-- Load my scripts -->
+	<script type="text/javascript" src="WorkoutProgram.js"></script>
+
+	<!-- Load my scripts -->
+	<script>
+		$(document).ready(function () {
+			$("#Home").children().css("background-color", "Transparent");
+			$("#Home").children().css("background-repeat", "no-repeat");
+			$("#Home").children().css("border", "none");
+			$("#Home").children().css("cursor", "pointer");
+			$("#Home").children().css("overflow", "hidden");
+			$("#Home").children().css("outline", "none");
+
+			$("#WP").children().css("background-color", "Transparent");
+			$("#WP").children().css("background-repeat", "no-repeat");
+			$("#WP").children().css("border", "none");
+			$("#WP").children().css("cursor", "pointer");
+			$("#WP").children().css("overflow", "hidden");
+			$("#WP").children().css("outline", "none");
+
+			$("#aboutUs").children().css("background-color", "Transparent");
+			$("#aboutUs").children().css("background-repeat", "no-repeat");
+			$("#aboutUs").children().css("border", "none");
+			$("#aboutUs").children().css("cursor", "pointer");
+			$("#aboutUs").children().css("overflow", "hidden");
+			$("#aboutUs").children().css("outline", "none");
+
+
+		});
+	</script>
+
+
+</head>
+
+<body>
+	<div class="container-fluid">
+		<!--
+		<img class="smaller-image thick-red-border" src="CompanyLogo.png" alt="SR Contruction logo">
+		
+		<iframe class="img-responsive thick-red-border" src="CompanyLogo.svg" width="auto" height="1800"> </iframe>
+		<img src="CompanyLogo.svg" alt="SR Logo" style="width: auto; height: auto;">
+		-->
+		<!-- clear screen-->
+
+		<div style="color: green">
+			<div class="row text-center" id="topRow">
+
+				<div class="col-md-4 col-xs-4" id="Home"><button>HOME</button></div>
+				<div class="col-md-4 col-xs-4" id="WP"><button>WORKOUT PROGRAM</button></div>
+				<div class="col-md-4 col-xs-4" id="aboutUs"><button>ABOUT US</button></div>
+
+			</div>
+
+
+			<h1 class="text-center">Workout Program</h1>
+			<p style="font-family: Lobster Two" class="text-center" id="EPR">
+				Enter Max(lbs):
+			</p>
+		</div>
+		<div>
+			<div class="row">
+				<input class="center-block text-center" type="text" id="maxWeightInput" placeholder="lbs" required
+					data-value>
+			</div>
+
+			<!-- Button below -->
+			<div class="row">
+				<div class="col-md-12 col-xs-12"></div>
+			</div>
+
+			<button data-update class="btn btn-primary center-block" type="button" id="PR"
+				onclick="CalculateSchedule()">
+				<i class="fa fa-paper-plane">Workout Schedule</i></button>
+		</div>
+
+		<!-- Looks good now, since it's actually behaving the way you wrote it now. -->
+		<!-- You're thinking, "IT LOOKS LIKE SHIT NOW!" That's because you didn't keep in mind bootstrap allows a maximum of 12 columns... You're usking over fucking 36 in your html -->
+		<div id="Schedule_view">
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<p></p>
+				</div>
+			</div>
+
+			<div data-row class="row container-fluid">
+
+				<!-- So these columns, you want them to all take one row if you have a big screen. But if you do NOT have a big screen, you might want to split them ONE column per row, that means, if the screen is extra small (xs), you use the entire 12 columns... if the screen is medium (md), maybe you wanna do the layout we have now.
+
+					But again, if you want it small, you should take the entire 12 spaces. Maybe not all 12, but only 6 lol -->
+
+				<!-- that's 12 this next part is in the NEXT line... Can't even scroll because it's cutting it. So you have to take the 12 and divide it by 5 somehow... so how do you wanna dive them?
+
+
+					You can do 2 per column, but you'll have 2 to spare since 2 * 5 = 10, 12 - 10 => 2 that is fine
+
+					i dint know about the 12 spaces, was Looking at tutorials online 
+					If you wanna center them, then just take the remaining 2 and put one on the left, one on the right by using the offset class
+
+
+					You don't have to specify the right one, since it's all based on the left one...
+
+					NOW your other problem... sizing when it's small as fuck... look
+
+					NOT good, so what you wanna do is only have them all on the same line IF they're medium sized or some shit
+
+					Idk you can adjust it however you want. That was confusing? not at all bro
+					i understood everything 
+					Yeah, so that's the concept, it's not too bad. But yeah, you can do different shit.
+					You can even hide some shit on different resolutions.
+
+					Wait, so what was I helping youwith?  I forgot. That was my issue lol you answered everything
+
+					i didnt uderstand the grid, but now i do. im going to try to understand bootstrap 4 grid.
+					It's probably the same as 4, but I wanted to show you the basics with 3. It's probably similar.
+
+					The only thing that might be a bit confusing is the rows shit. They're only required when you need to make sure the elements you're adding are not in the same "colum set" as the things before it. For example.
+				-->
+
+				<div class="col-md-1 col-xs-1"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum1"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum2"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum3"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum4"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum5"></div>
+			</div>
+
+			<!-- creating an endline -->
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<p></p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12 col-xs-12">
+					<p></p>
+				</div>
+			</div>
+			<!-- 			<div class="row"><div class="col-md-12 col-xs-12"><p></p></div></div>
+				<div class="row"><div class="col-md-12 col-xs-12"><p></p></div></div> -->
+
+			<div data-row class="row">
+
+				<div class="col-md-1 col-xs-1"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum6"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum7"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum8"></div>
+
+				<div data-column class="col-md-2 col-xs-2" id="colum9"></div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
