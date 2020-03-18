@@ -123,5 +123,5 @@ function WorkoutProgram(x, object) {
 	$("#colum9").append($("<p>").text("2 x " + R(x * 1.035121457)));
 	$("#colum9").append($("<p>").text("1 x " + R(x * 1.05708502)));
 
-	$('footer').css("position", "sticky");
+	// $('footer').css("position", "sticky");
 }
