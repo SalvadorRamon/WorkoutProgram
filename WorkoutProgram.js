@@ -11,7 +11,9 @@ function CalculateSchedulejQuery() {
 function CalculateSchedule() {
 	var maxWeightElement = document.getElementById("maxWeightInput");
 	var maxWeight = parseInt(maxWeightElement.value);
-	WorkoutProgram(maxWeight);
+	if (!isNaN(maxWeight)) {
+		WorkoutProgram(maxWeight);
+	}
 }
 
 function create(text) {

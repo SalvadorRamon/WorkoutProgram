@@ -165,9 +165,9 @@
 		<div style="color: green">
 			<div class="row text-center" id="topRow">
 
-				<div class="col-md-4 col-xs-4" id="Home"><button>HOME</button></div>
-				<div class="col-md-4 col-xs-4" id="WP"><button>WORKOUT PROGRAM</button></div>
-				<div class="col-md-4 col-xs-4" id="aboutUs"><button>ABOUT US</button></div>
+				<div class="col-md-4 col-xs-4" id="Home"><button><i class="fa fa-paper-plane">HOME</i></button></div>
+				<div class="col-md-4 col-xs-4" id="WP"><button><i class="fa fa-paper-plane">WORKOUT PROGRAM</i></button></div>
+				<div class="col-md-4 col-xs-4" id="aboutUs"><button><i class="fa fa-paper-plane">ABOUT US</i></button></div>
 
 			</div>
 
@@ -179,15 +179,17 @@
 		</div>
 		<div>
 			<div class="row">
-				<input class="center-block text-center" type="text" id="maxWeightInput" placeholder="lbs" required
-					data-value>
+				<input class="center-block text-center col-md-1 col-xs-1" type="text" id="maxWeightInput"
+					placeholder="lbs" required data-value>
 			</div>
 
 			<!-- Button below -->
 			<div class="row">
 				<div class="col-md-12 col-xs-12"></div>
 			</div>
-
+			<div class="row">
+				<div class="col-md-12 col-xs-12"></div>
+			</div>			
 			<button data-update class="btn btn-primary center-block" type="button" id="PR"
 				onclick="CalculateSchedule()">
 				<i class="fa fa-paper-plane">Workout Schedule</i></button>
@@ -253,19 +255,15 @@
 
 				<div class="col-md-1 col-xs-1"></div>
 
-				<div data-column class="col-md-1 col-xs-2" id="colum1"></div>
-				<div class="col-md-1 col-xs-1"></div>
+				<div data-column class="col-md-2 col-xs-2" id="colum1"></div>
 
-				<div data-column class="col-md-1 col-xs-2" id="colum2"></div>
-				<div class="col-md-1 col-xs-1"></div>
+				<div data-column class="col-md-2 col-xs-2" id="colum2"></div>
 
-				<div data-column class="col-md-1 col-xs-2" id="colum3"></div>
-				<div class="col-md-1 col-xs-1"></div>
+				<div data-column class="col-md-2 col-xs-2" id="colum3"></div>
 
-				<div data-column class="col-md-1 col-xs-2" id="colum4"></div>
-				<div class="col-md-1 col-xs-1"></div>
+				<div data-column class="col-md-2 col-xs-2" id="colum4"></div>
 
-				<div data-column class="col-md-1 col-xs-2" id="colum5"></div>
+				<div data-column class="col-md-2 col-xs-2" id="colum5"></div>
 
 				<div class="col-md-1 col-xs-1"></div>
 			</div>
