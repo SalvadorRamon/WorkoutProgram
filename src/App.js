@@ -1,7 +1,5 @@
 import './App.css'
-import Schedule from './Schedule'
 import NewSchedule from './NewSchedule'
-import CompanyLogo from './CompanyLogo.png'; // Import your custom icon
 
 import { useState } from 'react';
 
