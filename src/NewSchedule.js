@@ -1,153 +1,89 @@
-import './Schedule.css'
+import Box from '@mui/material/Box';
+import * as React from 'react';
+import './Schedule.css';
+
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 
 function R(x) {
   return Math.ceil(x / 5) * 5;
 }
 
+const days = (data) => [
+  {
+    day: 'Day 1',
+    sets: [createSet(10, R(data.value * 0.480627088)), createSet(10, R(data.value * 0.553238866)), createSet(10, R(data.value * 0.610323887)), createSet(10, R(data.value * 0.667847227)), createSet(10, R(data.value * 0.721184819))]
+  },
+  {
+    day: 'Day 2',
+    sets: [createSet(10, R(data.value * 0.481882591)), createSet(8, R(data.value * 0.553238866)), createSet(8, R(data.value * 0.610323887)), createSet(8, R(data.value * 0.666295547)), createSet(8, R(data.value * 0.723380567)), createSet(8, R(data.value * 0.780465587))]
+  },
+  {
+    day: 'Day 3',
+    sets: [createSet(10, R(data.value * 0.481882591)), createSet(8, R(data.value * 0.553238866)), createSet(8, R(data.value * 0.610323887)), createSet(8, R(data.value * 0.666295547)), createSet(8, R(data.value * 0.723380567)), createSet(8, R(data.value * 0.780465587))]
+  },
+  {
+    day: 'Day 4',
+    sets: [createSet(10, R(data.value * 0.481882591)), createSet(8, R(data.value * 0.553238866)), createSet(8, R(data.value * 0.610323887)), createSet(8, R(data.value * 0.666295547)), createSet(8, R(data.value * 0.723380567)), createSet(8, R(data.value * 0.780465587))]
+  },
+  {
+    day: 'Day 5',
+    sets: [createSet(10, R(data.value * 0.481882591)), createSet(8, R(data.value * 0.553238866)), createSet(8, R(data.value * 0.610323887)), createSet(8, R(data.value * 0.666295547)), createSet(8, R(data.value * 0.723380567)), createSet(8, R(data.value * 0.780465587))]
+  },
+  {
+    day: 'Day 6',
+    sets: [createSet(10, R(data.value * 0.481882591)), createSet(8, R(data.value * 0.553238866)), createSet(8, R(data.value * 0.610323887)), createSet(8, R(data.value * 0.666295547)), createSet(8, R(data.value * 0.723380567)), createSet(8, R(data.value * 0.780465587))]
+  },
+  {
+    day: 'Day 7',
+    sets: [createSet(10, R(data.value * 0.481882591)), createSet(8, R(data.value * 0.553238866)), createSet(8, R(data.value * 0.610323887)), createSet(8, R(data.value * 0.666295547)), createSet(8, R(data.value * 0.723380567)), createSet(8, R(data.value * 0.780465587))]
+  },
+  {
+    day: 'Day 8',
+    sets: [createSet(10, R(data.value * 0.481882591)), createSet(8, R(data.value * 0.553238866)), createSet(8, R(data.value * 0.610323887)), createSet(8, R(data.value * 0.666295547)), createSet(8, R(data.value * 0.723380567)), createSet(8, R(data.value * 0.780465587))]
+  },
+  {
+    day: 'Day 9',
+    sets: [createSet(10, R(data.value * 0.481882591)), createSet(8, R(data.value * 0.553238866)), createSet(8, R(data.value * 0.610323887)), createSet(8, R(data.value * 0.666295547)), createSet(8, R(data.value * 0.723380567)), createSet(8, R(data.value * 0.780465587))]
+  },
+]
+
+function createSet(rep, weight) {
+  return (
+    <Container >{rep} x {weight} </Container >
+  )
+}
+
+function createContainer(data) {
+  return (
+    <Grid xs={4} md={4} sm={8}>
+      <Box>
+        <Container>{data.day}</Container>
+        <Box>
+          {data.sets}
+        </Box>
+      </Box>
+    </Grid>
+  )
+}
+
+const TableDays = (data) => {
+  return (
+    <Container>
+      <Box>
+        <Grid container spacing={2}>
+          {days(data).map((day, index) => (
+            createContainer(day)
+          ))}
+        </Grid>
+      </Box >
+    </Container>
+  )
+}
+
 const NewSchedule = (data) => {
   return (
-    <div className="table-container">
-      <table className="custom-table">
-        <thead>
-          <tr>
-            <th>Day 1</th>
-            <th>Day 2</th>
-            <th>Day 3</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>10 x {R(data.value * 0.480627088)}</td>
-            <td>10 x {R(data.value * 0.481882591)}</td>
-            <td>10 x {R(data.value * 0.481882591)}</td>
-          </tr>
-          <tr>
-            <td>10 x {R(data.value * 0.553238866)}</td>
-            <td>8 x {R(data.value * 0.553238866)}</td>
-            <td>8 x {R(data.value * 0.553238866)}</td>
-          </tr>
-          <tr>
-            <td>10 x {R(data.value * 0.610323887)}</td>
-            <td>8 x {R(data.value * 0.610323887)}</td>
-            <td>6 x {R(data.value * 0.610323887)}</td>
-          </tr>
-          <tr>
-            <td>10 x {R(data.value * 0.667847227)}</td>
-            <td>8 x {R(data.value * 0.666295547)}</td>
-            <td>6 x {R(data.value * 0.723380567)}</td>
-          </tr>
-          <tr>
-            <td>10 x {R(data.value * 0.721184819)}</td>
-            <td>8 x {R(data.value * 0.723380567)}</td>
-            <td>6 x {R(data.value * 0.780465587)}</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td>8 x {R(data.value * 0.780465587)}</td>
-            <td>6 x {R(data.value * 0.850708502)}</td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
-      <p></p>
-      <table className="custom-table">
-        <thead>
-          <tr>
-            <th>Day 4</th>
-            <th>Day 5</th>
-            <th>Day 6</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>10 x {R(data.value * 0.481882591)}</td>
-            <td>10 x {R(data.value * 0.481882591)}</td>
-            <td>10 x {R(data.value * 0.481882591)}</td>
-          </tr>
-          <tr>
-            <td>8 x {R(data.value * 0.553238866)}</td>
-            <td>8 x {R(data.value * 0.553238866)}</td>
-            <td>8 x {R(data.value * 0.645445344)}</td>
-          </tr>
-          <tr>
-            <td>5 x {R(data.value * 0.702530364)}</td>
-            <td>5 x {R(data.value * 0.702530364)}</td>
-            <td>6 x {R(data.value * 0.723380567)}</td>
-          </tr>
-          <tr>
-            <td>5 x {R(data.value * 0.801315789)}</td>
-            <td>5 x {R(data.value * 0.801315789)}</td>
-            <td>4 x {R(data.value * 0.801315789)}</td>
-          </tr>
-          <tr>
-            <td>5 x {R(data.value * 0.8298583)}</td>
-            <td>5 x {R(data.value * 0.8298583)}</td>
-            <td>4 x {R(data.value * 0.8298583)}</td>
-          </tr>
-          <tr>
-            <td>5 x {R(data.value * 0.850708502)}</td>
-            <td>5 x {R(data.value * 0.850708502)}</td>
-            <td>4 x {R(data.value * 0.850708502)}</td>
-          </tr>
-          <tr>
-            <td>5 x {R(data.value * 0.872672065)}</td>
-            <td>5 x {R(data.value * 0.850708502)}</td>
-            <td>4 x {R(data.value * 0.907793522)}</td>
-          </tr>
-        </tbody>
-      </table>
-      <p></p>
-      <table className="custom-table">
-        <thead>
-          <tr>
-            <th>Day 7</th>
-            <th>Day 8</th>
-            <th>Day 9</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>10 x {R(data.value * 0.518117409)}</td>
-            <td>10 x {R(data.value * 0.518117409)}</td>
-            <td>10 x {R(data.value * 0.481882591)}</td>
-          </tr>
-          <tr>
-            <td>8 x {R(data.value * 0.645445344)}</td>
-            <td>8 x {R(data.value * 0.645445344)}</td>
-            <td>8 x {R(data.value * 0.645445344)}</td>
-          </tr>
-          <tr>
-            <td>6 x {R(data.value * 0.702530364)}</td>
-            <td>6 x {R(data.value * 0.723380567)}</td>
-            <td>6 x {R(data.value * 0.780465587)}</td>
-          </tr>
-          <tr>
-            <td>4 x {R(data.value * 0.850708502)}</td>
-            <td>4 x {R(data.value * 0.88694332)}</td>
-            <td>4 x {R(data.value * 0.850708502)}</td>
-          </tr>
-          <tr>
-            <td>3 x {R(data.value * 0.88694332)}</td>
-            <td>3 x {R(data.value * 0.922064777)}</td>
-            <td>3 x {R(data.value * 0.94291498)}</td>
-          </tr>
-          <tr>
-            <td>2 x {R(data.value * 0.907793522)}</td>
-            <td>2 x {R(data.value * 0.964878543)}</td>
-            <td>2 x {R(data.value * 1.035121457)}</td>
-          </tr>
-          <tr>
-            <td>1 x {R(data.value * 0.964878543)}</td>
-            <td>1 x {R(data.value * 1.014271255)}</td>
-            <td>1 x {R(data.value * 1.05708502)}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <TableDays value={data.value} />
   );
 };
 

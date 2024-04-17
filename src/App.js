@@ -1,7 +1,9 @@
-import './App.css'
-import NewSchedule from './NewSchedule'
-
+import TextField from '@mui/material/TextField';
+import * as React from 'react';
 import { useState } from 'react';
+import './App.css';
+import NewSchedule from './NewSchedule';
+import { ThemeProvider } from '@mui/material/styles';
 
 function App() {
   const [inputText, setInputText] = useState('');
@@ -17,21 +19,23 @@ function App() {
 
   return (
     <div className="App-header">
-      {/* <h1>
-        <div>Workout Program</div>
-        <div>Enter Max(lbs)</div>
-      </h1> */}
-      {/* <h2>
-        <div>Workout Program</div>
-        <div>Enter Max(lbs)</div>
-      </h2> */}
       <h3>
         <div>Workout Program</div>
         <div>Enter Max(lbs)</div>
       </h3>
-      <input className='input' value={inputText} onChange={handleChange} />
+      <TextField size='small' className='input' value={inputText} onChange={handleChange} sx={{
+        '& .MuiOutlinedInput-root': {
+          backgroundColor: 'lightgrey',
+          fontWeight: 'bold',
+        },
+        '& input': {  // Targets the input element directly
+          textAlign: 'center',
+        },
+        '& .MuiInputBase-input': { // For non-outlined variants
+          textAlign: 'center',
+        }
+      }}/>
       <p></p>
-      {/* {isValid && <Schedule value={inputText} />} */}
       {isValid && <NewSchedule value={inputText} />}
     </div>
   );
