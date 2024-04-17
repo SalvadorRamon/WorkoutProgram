@@ -1,5 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif');
+
 .App {
   text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .App-header {
@@ -11,16 +16,19 @@
   justify-content: top;
   font-size: calc(8px + 2vmin);
   color: rgb(6, 244, 6);
-  font-family: Baskerville;
   text-align: center;
+  font-family: "Noto Serif", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.input{
+.input-style {
   text-align: center;
   vertical-align: top;
   /* height: 2em;
   width: 15em; */
   font-size: calc(10px + 1vmin);
-  font-family: Baskerville;
+  font-family: 'Josefin Sans', cursive;
   font-weight: bold;
+  background-color: lightblue;
 }

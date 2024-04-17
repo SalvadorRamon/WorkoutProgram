@@ -23,10 +23,11 @@ function App() {
         <div>Workout Program</div>
         <div>Enter Max(lbs)</div>
       </h3>
-      <TextField size='small' className='input' value={inputText} onChange={handleChange} sx={{
+      <TextField size='small' value={inputText} onChange={handleChange} sx={{
         '& .MuiOutlinedInput-root': {
           backgroundColor: 'lightgrey',
           fontWeight: 'bold',
+          fontFamily: 'Noto Serif',
         },
         '& input': {  // Targets the input element directly
           textAlign: 'center',
@@ -34,7 +35,7 @@ function App() {
         '& .MuiInputBase-input': { // For non-outlined variants
           textAlign: 'center',
         }
-      }}/>
+      }} />
       <p></p>
       {isValid && <NewSchedule value={inputText} />}
     </div>
