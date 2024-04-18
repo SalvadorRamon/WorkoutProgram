@@ -70,7 +70,7 @@ function createContainer(data) {
   return (
     <Grid xs={4} md={4} sm={8}>
       <Box>
-        <Container>{data.day}</Container>
+        <Container><u><em>{data.day}</em></u></Container>
         <Box>
           {data.sets}
         </Box>
