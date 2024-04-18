@@ -3,7 +3,8 @@ import * as React from 'react';
 import { useState } from 'react';
 import './App.css';
 import NewSchedule from './NewSchedule';
-import { ThemeProvider } from '@mui/material/styles';
+import Schedule from './Schedule';
+
 
 function App() {
   const [inputText, setInputText] = useState('');
