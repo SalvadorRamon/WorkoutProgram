@@ -3,7 +3,6 @@ import * as React from 'react';
 import { useState } from 'react';
 import './App.css';
 import NewSchedule from './NewSchedule';
-import Schedule from './Schedule';
 
 
 function App() {
@@ -37,7 +36,6 @@ function App() {
           textAlign: 'center',
         }
       }} />
-      <p></p>
       {isValid && <NewSchedule value={inputText} />}
     </div>
   );
