@@ -1,7 +1,7 @@
 {
   "name": "Workout Program",
   "version": "1.0.0",
-  "homepage": "https://salvadorramon.github.io/WorkoutProgram/public",
+  "homepage": "https://salvadorramon.github.io/WorkoutProgram/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.4",
