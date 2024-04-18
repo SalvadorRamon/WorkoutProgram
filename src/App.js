@@ -36,6 +36,7 @@ function App() {
           textAlign: 'center',
         }
       }} />
+      <p/>
       {isValid && <NewSchedule value={inputText} />}
     </div>
   );
