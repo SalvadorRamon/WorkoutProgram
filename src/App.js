@@ -26,7 +26,7 @@ function App() {
       </h3>
       <TextField size='small' value={inputText} onChange={handleChange} sx={{
         '& .MuiOutlinedInput-root': {
-          backgroundColor: 'lightgrey',
+          backgroundColor: 'red',
           fontWeight: 'bold',
           fontFamily: 'Noto Serif',
         },
