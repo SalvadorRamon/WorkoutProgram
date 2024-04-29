@@ -62,13 +62,13 @@ const days = (data) => [
 
 function createSet(rep, weight) {
   return (
-    <Container >{rep} x {weight} </Container >
+    <Container >{rep} x {weight}</Container >
   )
 }
 
 function createContainer(data) {
   return (
-    <Grid xs={4} md={4} sm={8}>
+    <Grid xs={4} md={4} sm={4}>
       <Box>
         <Container><u><em>{data.day}</em></u></Container>
         <Box>
@@ -84,7 +84,7 @@ const TableDays = (data) => {
     <Container >
       <Box>
         <Grid container spacing={2}>
-          {days(data).map((day, index) => (
+          {days(data).map((day) => (
             createContainer(day)
           ))}
         </Grid>
